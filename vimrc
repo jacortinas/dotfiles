@@ -35,7 +35,6 @@ set ignorecase
 set incsearch
 set laststatus=2
 set list
-set listchars=tab:»·,trail:·
 set matchtime=0
 set nobackup
 set noerrorbells
@@ -59,7 +58,7 @@ set tags=.git/tags
 set undolevels=500
 set wildignorecase
 set wildmenu
-set shell=/bin/zsh
+" set shell=/bin/zsh
 
 set t_ZH=[3m
 set t_ZR=[23m
@@ -85,19 +84,11 @@ if exists("+undofile")
   set undodir=~/.vim/undo/
 endif
 
-if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-endif
-
 if (has("termguicolors"))
   set termguicolors
 endif
 
-if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-  set background=dark
-else
-  set background=light
-endif
+set background=light
 
 colorscheme one
 
