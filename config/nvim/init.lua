@@ -1,8 +1,6 @@
 -- Basic Configuration
-
 vim.g.mapleader = ';'
 
--- vim.opt.backspace = 2
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
@@ -44,8 +42,12 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'github/copilot.vim'
+Plug 'navarasu/onedark.nvim'
 
 vim.call('plug#end')
+
+-- Color Scheme
+require('onedark').load()
 
 -- More Configuration
 
@@ -59,7 +61,7 @@ vim.opt.listchars = {tab = '» ', trail = '·', extends = '>', precedes = '<', n
 vim.opt.joinspaces = false
 
 vim.opt.textwidth = 80
--- vim.opt.colorcolumn:append(1)
+vim.opt.colorcolumn = '80'
 
 -- Key Mappings
 
